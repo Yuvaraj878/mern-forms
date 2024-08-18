@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Forms Example</title>
+</head>
+<body>
+
+    <!-- Form 1: Registration Form -->
+    <h2>Registration Form</h2>
+    <form action="/submit-registration" method="POST">
+        <label for="reg-name">Full Name:</label><br>
+        <input type="text" id="reg-name" name="name" required><br><br>
+
+        <label for="reg-email">Email:</label><br>
+        <input type="email" id="reg-email" name="email" required><br><br>
+
+        <label for="reg-username">Username:</label><br>
+        <input type="text" id="reg-username" name="username" required><br><br>
+
+        <label for="reg-password">Password:</label><br>
+        <input type="password" id="reg-password" name="password" required><br><br>
+
+        <input type="submit" value="Register">
+    </form>
+    <hr>
+
+    <!-- Form 2: Login Form -->
+    <h2>Login Form</h2>
+    <form action="/submit-login" method="POST">
+        <label for="login-username">Username:</label><br>
+        <input type="text" id="login-username" name="username" required><br><br>
+
+        <label for="login-password">Password:</label><br>
+        <input type="password" id="login-password" name="password" required><br><br>
+
+        <input type="submit" value="Login">
+    </form>
+    <hr>
+
+    <!-- Form 3: Feedback Form -->
+    <h2>Feedback Form</h2>
+    <form action="/submit-feedback" method="POST">
+        <label for="feedback-name">Name:</label><br>
+        <input type="text" id="feedback-name" name="name" required><br><br>
+
+        <label for="feedback-email">Email:</label><br>
+        <input type="email" id="feedback-email" name="email" required><br><br>
+
+        <label for="feedback-comments">Comments:</label><br>
+        <textarea id="feedback-comments" name="comments" rows="4" cols="50" required></textarea><br><br>
+
+        <label for="feedback-rating">Rating:</label><br>
+        <input type="number" id="feedback-rating" name="rating" min="1" max="5" required><br><br>
+
+        <input type="submit" value="Submit Feedback">
+    </form>
+    <hr>
+
+    <!-- Form 4: Survey Form -->
+    <h2>Survey Form</h2>
+    <form action="/submit-survey" method="POST">
+        <label for="survey-question1">How satisfied are you with our service?</label><br>
+        <select id="survey-question1" name="question1" required>
+            <option value="very-satisfied">Very Satisfied</option>
+            <option value="satisfied">Satisfied</option>
+            <option value="neutral">Neutral</option>
+            <option value="dissatisfied">Dissatisfied</option>
+            <option value="very-dissatisfied">Very Dissatisfied</option>
+        </select><br><br>
+
+        <label for="survey-question2">Would you recommend us to others?</label><br>
+        <input type="radio" id="survey-yes" name="question2" value="yes">
+        <label for="survey-yes">Yes</label><br>
+        <input type="radio" id="survey-no" name="question2" value="no">
+        <label for="survey-no">No</label><br><br>
+
+        <input type="submit" value="Submit Survey">
+    </form>
+    <hr>
+
+    <!-- Form 5: Order Form -->
+    <h2>Order Form</h2>
+    <form action="/submit-order" method="POST">
+        <label for="order-product">Product:</label><br>
+        <select id="order-product" name="product" required>
+            <option value="product1">Product 1</option>
+            <option value="product2">Product 2</option>
+            <option value="product3">Product 3</option>
+        </select><br><br>
+
+        <label for="order-quantity">Quantity:</label><br>
+        <input type="number" id="order-quantity" name="quantity" min="1" required><br><br>
+
+        <label for="order-address">Shipping Address:</label><br>
+        <textarea id="order-address" name="address" rows="4" cols="50" required></textarea><br><br>
+
+        <input type="submit" value="Place Order">
+    </form>
+    <hr>
+
+    <!-- Form 6: Appointment Booking Form -->
+    <h2>Appointment Booking Form</h2>
+    <form action="/submit-appointment" method="POST">
+        <label for="appt-name">Name:</label><br>
+        <input type="text" id="appt-name" name="name" required><br><br>
+
+        <label for="appt-email">Email:</label><br>
+        <input type="email" id="appt-email" name="email" required><br><br>
+
+        <label for="appt-phone">Phone Number:</label><br>
+        <input type="tel" id="appt-phone" name="phone" required><br><br>
+
+        <label for="appt-date">Preferred Date:</label><br>
+        <input type="date" id="appt-date" name="date" required><br><br>
+
+        <label for="appt-time">Preferred Time:</label><br>
+        <input type="time" id="appt-time" name="time" required><br><br>
+
+        <input type="submit" value="Book Appointment">
+    </form>
+    <hr>
+
+    <!-- Form 7: Job Application Form -->
+    <h2>Job Application Form</h2>
+    <form action="/submit-job-application" method="POST">
+        <label for="job-name">Full Name:</label><br>
+        <input type="text" id="job-name" name="name" required><br><br>
+
+        <label for="job-email">Email:</label><br>
+        <input type="email" id="job-email" name="email" required><br><br>
+
+        <label for="job-phone">Phone Number:</label><br>
+        <input type="tel" id="job-phone" name="phone" required><br><br>
+
+        <label for="job-position">Position Applied For:</label><br>
+        <input type="text" id="job-position" name="position" required><br><br>
+
+        <label for="job-resume">Upload Resume:</label><br>
+        <input type="file" id="job-resume" name="resume" required><br><br>
+
+        <label for="job-cover">Cover Letter:</label><br>
+        <textarea id="job-cover" name="coverLetter" rows="4" cols="50"></textarea><br><br>
+
+        <input type="submit" value="Apply">
+    </form>
+    <hr>
+
+    <!-- Form 8: Event Registration Form -->
+    <h2>Event Registration Form</h2>
+    <form action="/submit-event-registration" method="POST">
+        <label for="event-name">Name:</label><br>
+        <input type="text" id="event-name" name="name" required><br><br>
+
+        <label for="event-email">Email:</label><br>
+        <input type="email" id="event-email" name="email" required><br><br>
+
+        <label for="event-phone">Phone Number:</label><br>
+        <input type="tel" id="event-phone" name="phone" required><br><br>
+
+        <label for="event-date">Event Date:</label><br>
+        <input type="date" id="event-date" name="date" required><br><br>
+
+        <label for="event-attendees">Number of Attendees:</label><br>
+        <input type="number" id="event-attendees" name="attendees" min="1" required><br><br>
+
+        <input type="submit" value="Register">
+    </form>
+    <hr>
+
+    <!-- Form 9: Newsletter Subscription Form -->
+    <h2>Newsletter Subscription Form</h2>
+    <form action="/submit-subscription" method="POST">
+        <label for="subscription-name">Name:</label><br>
+        <input type="text" id="subscription-name" name="name" required><br><br>
+
+        <label for="subscription-email">Email:</label><br>
+        <input type="email" id="subscription-email" name="email" required><br><br>
+
+        <input type="submit" value="Subscribe">
+    </form>
+    <hr>
+
+    <!-- Form 10: Support Ticket Form -->
+    <h2>Support Ticket Form</h2>
+    <form action="/submit-ticket" method="POST">
+        <label for="ticket-name">Name:</label><br>
+        <input type="text" id="ticket-name" name="name" required><br><br>
+
+        <label for="ticket-email">Email:</label><br>
+        <input type="email" id="ticket-email" name="email" required><br><br>
+
+        <label for="ticket-issue">Issue Description:</label><br>
+        <textarea id="ticket-issue" name="issue" rows="4" cols="50" required></textarea><br><br>
+
+        <input type="submit" value="Submit Ticket">
+    </form>
+    <hr>
+
+    <!-- Form 11: Contact Us Form -->
+    <h2>Contact Us Form</h2>
+    <form action="/submit-contact" method="POST">
+        <label for="contact-name">Name:</label><br>
+        <input type="text" id="contact-name" name="name" required><br><br>
+
+        <label for="contact-email">Email:</label><br>
+        <input type="email" id="contact-email" name="email" required><br><br>
+
+        <label for="contact-subject">Subject:</label><br>
+        <input type="text" id="contact-subject" name="subject" required><br><br>
+
+        <label for="contact-message">Message:</label><br>
+        <textarea id="contact-message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+        <input type="submit" value="Send Message">
+    </form>
+
+</body>
+</html>
